@@ -1,0 +1,43 @@
+.p-2 {
+    padding: .5rem!important;
+}
+
+.text-dark {
+    color: #343a40!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+mb-2, .my-2 {
+    margin-bottom: .5rem!important;
+}
+.mt-2, .my-2 {
+    margin-top: .5rem!important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+img {
+    max-width:90%;
+    height:auto;
+}
+
+.btn-spc{
+    margin: -5px;
+    height: 100px;
+}
+
+.btn-spc:active {
+    transform: translateY(2px);;
+}
+
+.fa {
+    margin: 5px;
+}
+.btn-text{
+    color: white;
+    font-size: 24px
+
+}

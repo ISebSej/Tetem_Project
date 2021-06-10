@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Man Machine Exhibition</title>
+    <!--- Set Favicon .UT -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/apple-touch-icon.png"
+    />
+
+    <!--- Font Awesome 4 icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div
+      class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+    >
+      <!-- <h5 class="my-0 mr-md-auto font-weight-normal">University of Twente</h5> -->
+      <nav class="my-2 my-md-0 font-weight-normal">
+        <a class="p-2 text-dark" href="./index.html"
+          ><i id="connicon" aria-hidden="true" class="fa fa-user-times"></i
+          ><i aria-hidden="true" class="fa fa-reload"></i
+        ></a>
+        <button
+          class="p-2 text-dark"
+          id="nlbutton"
+          style="border: 0px"
+          onclick="switchLan()"
+        >
+          NL
+        </button>
+        <button
+          class="p-2 text-dark"
+          id="enbutton"
+          style="border: 0px"
+          onclick="switchLan()"
+        >
+          EN
+        </button>
+      </nav>
+    </div>
+
+    <div class="container">
+      <h2 id="topTxtnl" class="nl">
+        Voer de koppelcode in die op het scherm voor je te zien is:
+      </h2>
+      <h2 id="topTxten" class="en">
+        Please enter the connection code from the big screen:
+      </h2>
+    </div>
+    <!-- Submition boxes -->
+    <br />
+    <div class="container">
+      <form id="connectionForm">
+        <input
+          class="inpt"
+          id="codeBox1"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(1, event)"
+          onfocus="onFocusEvent(1)"
+        />
+        <input
+          class="inpt"
+          id="codeBox2"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(2, event)"
+          onfocus="onFocusEvent(2)"
+        />
+        <input
+          class="inpt"
+          id="codeBox3"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(3, event)"
+          onfocus="onFocusEvent(3)"
+        />
+        <input
+          class="inpt"
+          id="codeBox4"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(4, event)"
+          onfocus="onFocusEvent(4)"
+        />
+        <input
+          class="inpt"
+          id="codeBox5"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(5, event)"
+          onfocus="onFocusEvent(5)"
+        />
+        <input
+          class="inpt"
+          id="codeBox6"
+          type="number"
+          maxlength="1"
+          onkeyup="onKeyUpEvent(6, event)"
+          onfocus="onFocusEvent(6)"
+        />
+      </form>
+    </div>
+    <br />
+    <br />
+
+    <!-- Slider -->
+
+    <!-- Buttons -->
+    <div id="allbuttons" class="container">
+      <div class="" id="questionbox"></div>
+      <div class="btn-group" role="group" id="videobox"></div>
+      <br />
+      <div class="btn-group" role="group" id="buttonbox">
+        <button hidden="true" id="submitbutton"></button>
+      </div>
+      <br />
+      <div class="btn-group" role="group" id="pagebox"></div>
+    </div>
+
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <div id="loader" class="loader" hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModallabel" aria-hidden="true">
+      <div class="modal-dialog vertical-align-center" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="videoModalTitle">Modal title</h5>
+            <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="btn-group" role="group" id="modalbuttonbox"></div>
+            <br />
+            <p id="videoModalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="videoModallabel"
+      aria-hidden="true"
+    >
+      <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="videoModalTitle">Modal title</h5>
+              <button
+                type="button"
+                id="close"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="btn-group" role="group" id="modalbuttonbox"></div>
+              <br />
+              <p id="videoModalDescription"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Control submission box -->
+    <script type="text/javascript" src="./resources/tab.js"></script>
+
+    <!-- PeerJS library -->
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <!-- PeerJS WebRTC configuration -->
+    <script type="text/javascript" src="./resources/peerJSsend.js"></script>
+  </body>
+
+  <script>
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+
+    function switchLan() {
+      console.log(event.target.innerText);
+      if (event.target.innerText == "NL") {
+        document.cookie = "lan=nl";
+      } else {
+        document.cookie = "lan=en";
+      }
+      if (window.conn && window.conn.open) {
+        if (event.target.innerText == "NL") {
+          window.conn.send("NL");
+          console.log("set to NL");
+          window.lan = "nl";
+          if (document.getElementById("myCssEN")) {
+            var element = document.getElementById("myCssEN");
+            element.parentNode.removeChild(element);
+          }
+          if (!document.getElementById("myCssNL")) {
+            var head = document.getElementsByTagName("head")[0];
+            var link = document.createElement("link");
+            link.id = "myCssNL";
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "/remote/resources/nl.css";
+            link.media = "all";
+            head.appendChild(link);
+          }
+        } else {
+          window.conn.send("EN");
+          console.log("set to EN");
+          window.lan = "en";
+          if (document.getElementById("myCssNL")) {
+            var element = document.getElementById("myCssNL");
+            element.parentNode.removeChild(element);
+          }
+          if (!document.getElementById("myCssEN")) {
+            var head = document.getElementsByTagName("head")[0];
+            var link = document.createElement("link");
+            link.id = "myCssEN";
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = "/remote/resources/en.css";
+            link.media = "all";
+            head.appendChild(link);
+          }
+        }
+        console.log("Switching language without reload");
+      } else {
+        location.reload();
+      }
+    }
+
+    let lan = getCookie("lan");
+    console.log(lan);
+    if (!lan) {
+      console.log("language not defined, automatically set to NL");
+      document.cookie = "lan=nl";
+      window.lan = "nl";
+    } else {
+      window.lan = lan;
+    }
+
+    if (window.lan == "nl") {
+      var cssId = "myCssNL"; // you could encode the css path itself to generate id..
+      if (!document.getElementById(cssId)) {
+        var head = document.getElementsByTagName("head")[0];
+        var link = document.createElement("link");
+        link.id = cssId;
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "/remote/resources/nl.css";
+        link.media = "all";
+        head.appendChild(link);
+      }
+    } else {
+      var cssId = "myCssEN"; // you could encode the css path itself to generate id..
+      if (!document.getElementById(cssId)) {
+        var head = document.getElementsByTagName("head")[0];
+        var link = document.createElement("link");
+        link.id = cssId;
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "/remote/resources/en.css";
+        link.media = "all";
+        head.appendChild(link);
+      }
+    }
+  </script>
+</html>

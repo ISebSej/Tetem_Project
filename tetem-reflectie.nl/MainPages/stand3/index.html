@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title -->
+    <title>Understands - Tetem Reflectie opstelling</title>
+
+    <!--- Set Favicon .UT -->
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/apple-touch-icon.png" />
+
+    <style>
+      :root {
+        --main-color: white !important;
+        --text-color: #298366 !important;
+        --select-color: #298366 !important;
+        --unselect-color: #1c5b47 !important;
+      }
+    </style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Page Stylesheet -->
+    <link rel="stylesheet" href="../resources/index.css" />
+    <!-- Awesome font 4 icon package -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- Stand identifier -->
+    <span id="stand" hidden>3</span>
+
+    <button class="tablink" onclick="openPage('p1', this, 'var(--select-color)')" id="defaultOpen">
+      <b class="nl">Verbinden</b>
+      <b class="en">Connect</b>
+    </button>
+    <button class="tablink" onclick="openPage('p2', this, 'var(--select-color)')">
+      <b class="nl">Introductie</b>
+      <b class="en">Introduction</b>
+    </button>
+    <button class="tablink" onclick="openPage('p3', this, 'var(--select-color)')">
+      <b class="nl">Uitleg</b>
+      <b class="en">Explanation</b>
+    </button>
+    <button class="tablink" onclick="openPage('p4', this, 'var(--select-color)')">
+      <b class="nl">Ervaren</b>
+      <b class="en">Experience</b>
+    </button>
+    <button class="tablink" onclick="openPage('p5', this, 'var(--select-color)')">
+      <b class="nl">Reflectie vragen</b>
+      <b class="en">Reflection questions</b>
+    </button>
+
+    <div id="p1" class="tabcontent">
+      <h2 id="ID">
+        <i id="connicon" aria-hidden="true" class="fa fa-user-times"></i>
+        <b>Koppelcode: </b>
+      </h2>
+      <br />
+      <p>
+        [NL] Hierboven vindt je de koppelcode om uw tablet aan dit scherm te koppelen. <br />
+        Voer deze in op je tablet en wacht tot de besturing zichtbaar is.
+      </p>
+      <br />
+      <p>
+        [EN] Here you can find the connection code to connect your tablet to the display <br />
+        Enter this on your tablet and wait for the devices to connect
+      </p>
+    </div>
+
+    <div id="p2" class="tabcontent">
+      <div class="nl">
+        <h3>Ervaren</h3>
+        <p>Installatie 3, Experience (Ervaar!) laat ervaren hoe apps, die gebruik maken van jouw gegevens (data) om jou te vertellen wie jij bent &ndash; en stelt de vraag of deze toepassing van AI jouw identiteit beoordeelt en jouw zelfbeeld be&iuml;nvloedt.</p>
+
+        <p>
+          Je hebt waarschijnlijk op social media wel eens advertenties gezien die ongewoon goed aansloten bij jouw interesses of ervaringen uit het verleden - zo goed misschien dat je dacht dat deze social media platformen jou beter kennen dan jij jezelf kent. Dit komt omdat algoritmes tegenwoordig
+          voorspellingen kunnen doen over jouw persoonlijkheid en voorkeuren met behulp van alle gegevens die beschikbaar zijn op social media, waaronder likes, reacties en je eigen berichten. Maar wat weet AI precies over jou? Nu is een goed moment om te kijken naar voorbeelden van zulke
+          voorspellingen. Daarbovenop, krijg je ook de kans om zo&rsquo;n voorspelling zelf te laten uitvoeren!
+        </p>
+      </div>
+      <div class="en">
+        <h3>Experience</h3>
+        <p>Installation 3, Experience provides you with an experience of how apps, that use your data, tell you who you are &ndash; and asks the question of whether this approach of AI judges your identity and influences your self-image.</p>
+
+        <p>
+          You have probably seen advertisements on social media that suited your interests or your past experiences uncannily well &ndash; so well that you might have thought that these social media know you better than you know yourself. This is because nowadays, algorithms can make predictions
+          about your personality and preferences based on all the data available on social media including likes, comments, and your own posts. But what exactly does AI know about you? Now, it is time to take a look at examples of what such predictions look like. But you can also do it yourself! Use
+          your data and experience what Facebook &amp; Co. &lsquo;know&rsquo; about you!
+        </p>
+      </div>
+    </div>
+
+    <div id="p3" class="tabcontent">
+      <div class="nl">
+        <h3>Uitleg</h3>
+      </div>
+      <div class="en">
+        <h3>Explanation</h3>
+      </div>
+    </div>
+
+    <div id="p4" class="tabcontent">
+      <div class="nl">
+        <h3 id="s3txtnl">Selecteer op de tablet wie je wilt analyseren op je tablet</h3>
+      </div>
+      <div class="en">
+        <h3 id="s3txten">Select who you would like to analyse on the tablet</h3>
+      </div>
+      <div style="text-align: center">
+        <div id="ann" hidden>
+          <iframe id="annframe" src="./jan.html" width="500" height="900" style="border: none; overflow: hidden" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div id="jan" hidden>
+          <iframe id="janframe" src="./ann.html" width="500" height="900" style="border: none; overflow: hidden" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div id="p5" class="tabcontent">
+      <div class="nl">
+        <h3>Reflectie vragen</h3>
+        <p>Als je klaar bent kun je verder gaan naar de vragenlijst</p>
+      </div>
+      <div class="en">
+        <h3>Reflection questions</h3>
+        <p>Once you're done you'll be forwarded to the reflection questions</p>
+      </div>
+    </div>
+
+    <!-- Tabbing of page -->
+    <script type="text/javascript" src="../resources/tab.js"></script>
+
+    <!-- PeerJS library -->
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <!-- PeerJS WebRTC configuration -->
+    <script type="text/javascript" src="../resources/peerJSreceive.js"></script>
+
+    <!-- YouTube API -->
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement("script");
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      function onYouTubeIframeAPIReady() {
+        window.player = new YT.Player("player", {
+          height: "720",
+          width: "1280",
+          videoId: "P4JpD1PWBDI",
+          events: {
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          console.log("--- Video Done!");
+          window.conn.send("Done");
+        }
+      }
+    </script>
+  </body>
+  <script type="text/javascript">
+    function mouse_position() {
+      var e = window.event;
+
+      var posX = e.clientX;
+      var posY = e.clientY;
+
+      console.log("X: " + posX + ", Y :" + posY);
+
+      var t = setTimeout(mouse_position, 1000);
+    }
+
+    mouse_position();
+  </script>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wie Ben Ik? - Tetem Reflectie opstelling</title>
+
+    <!--- Set Favicon .UT -->
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/apple-touch-icon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">University of Twente</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Skip to next</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Back to previous</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <video autoplay="true" id="videoElement" hidden=trues>
+
+        </video>
+        <!-- Heading Row -->
+        <div class="row align-items-center my-5" id = "callcard">
+            <div class="col-lg-7">
+
+            </div>
+            <!-- /.col-lg-8 -->
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Wie ben ik?</h1>
+                <p>“Who am I” introduces the main theme of “Reflections” by proposing an installation to literally
+                    reflect ourselves and upon ourselves.
+                    Technology has always mirrored our needs, potentials, aspirations and limits. It is with and through
+                    technology that we construct - and at
+                    the same time redefine - who we are. With the advent of digital and AI technologies, however, it is
+                    more and more complicated to understand
+                    what it means to be human. With this installation, we offer a moment to (literally) reflect about
+                    technology and how we identify ourselves through it.</p>
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Call to Action Well -->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body">
+                <h4 class="text-white m-0">Please Fill Out These Questions And Press Submit To Go To The Next Page</h4>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <!-- /.col-md-4 -->
+        <div class="col-md mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Who are you?</h2>
+                </div>
+                <div class="card-footer">
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <!-- /.col-md-4 -->
+        <div class="col-md mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Who are you?</h2>
+                </div>
+                <div class="card-footer">
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <!-- /.col-md-4 -->
+        <div class="col-md mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Who are you?</h2>
+                </div>
+                <div class="card-footer">
+                    <div class="form-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Tetem-Reflectie 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        //Smooth Scrolling to the form
+        $(document).ready(function(){  
+            var mydiv = document.getElementById("callcard");
+
+            var divOffset = mydiv.offsetTop + mydiv.offsetHeight - 20;
+            setTimeout(function(){
+                    window.scroll({
+                    top: divOffset,
+                    behavior: 'smooth'
+                });
+                },500
+            );
+        });
+
+    </script>
+
+</body>

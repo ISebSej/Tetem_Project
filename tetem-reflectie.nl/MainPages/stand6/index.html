@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title -->
+    <title>Understands - Tetem Reflectie opstelling</title>
+
+    <!--- Set Favicon .UT -->
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://1348661504.rsc.cdn77.org/.publisher/sd/utwente_base/ws2016/img/favicons/apple-touch-icon.png" />
+
+    <style>
+      :root {
+        --main-color: white !important;
+        --text-color: #7a5f20 !important;
+        --select-color: #7a5f20 !important;
+        --unselect-color: #664f1b !important;
+      }
+    </style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Page Stylesheet -->
+    <link rel="stylesheet" href="../resources/index.css" />
+    <!-- Awesome font 4 icon package -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body>
+    <!-- Stand identifier -->
+    <span id="stand" hidden>6</span>
+
+    <button class="tablink" onclick="openPage('p1', this, 'var(--select-color)')" id="defaultOpen"><b>Verbinden</b></button>
+    <button class="tablink" onclick="openPage('p2', this, 'var(--select-color)')"><b>Introductie</b></button>
+    <button class="tablink" onclick="openPage('p3', this, 'var(--select-color)')"><b>Video</b></button>
+    <button class="tablink" onclick="openPage('p4', this, 'var(--select-color)')"><b>Wie ben ik?</b></button>
+    <button class="tablink" onclick="openPage('p5', this, 'var(--select-color)')"><b>Reflectie vragen</b></button>
+
+    <div id="p1" class="tabcontent">
+      <h2 id="ID">
+        <i id="connicon" aria-hidden="true" class="fa fa-user-times"></i>
+        <b>Koppelcode: </b>
+      </h2>
+      <br />
+      <p>
+        Hierboven vindt je de koppelcode om uw tablet aan dit scherm te koppelen. <br />
+        Voer deze in op je tablet en wacht tot de besturing zichtbaar is.
+      </p>
+    </div>
+
+    <div id="p2" class="tabcontent">
+      <div class="nl">
+        <h3>INSTALLATIE 6: IMAGINE</h3>
+        <p>Installatie 6, Imagine (Stel je voor!) laat met een aantal video&rsquo;s zien hoe filmmakers zich de digitale toekomst voorstellen &ndash; en stelt de vraag hoe jij daarover denkt.</p>
+
+        <p>
+          Deze installatie stelt je in staat om virtueel te reizen naar mogelijke nabije toekomstbeelden, en soms zelfs van het heden, waar technologie, en vooral kunstmatige intelligentie, sterk is doorgedrongen. Vele artiesten, militanten, en zelfs bepaalde bedrijven hebben geprobeerd hun visie te
+          delen met betrekking tot wat AI kan doen of zou kunnen doen in toekomstige samenlevingen. In deze installatie maken wij gebruik van de mogelijkheid om aan jou verschillende visies op onze technologische realiteit of onze vermeende technologische toekomst te laten zien. Tegelijkertijd
+          willen we je ook een kleine indruk geven van wat er op dit moment al mogelijk is. Vandaag de dag zijn slimme sensoren in combinatie met machine learning technologie&euml;n al in staat tot het scannen en uit te lezen van je lichaam, om vervolgens daaruit conclusies te trekken over je
+          emoties en de waardering van de inhoud die je op dat moment bekijkt. Ben je er klaar voor om in een situatie terecht te komen waarin je zult observeren, maar ook geobserveerd gaat worden door de AI technologie&euml;n!?
+        </p>
+      </div>
+      <div class="en">
+        <h3>INSTALLATION 6: IMAGINE</h3>
+
+        <p>Installation 6, Imagine uses a number of video clips to show how filmmakers imagine the digital future &ndash; and poses the question of how you think about such depicted scenarios.</p>
+
+        <p>
+          This installation allows you to virtually travel in possible near futures and sometimes in already existing presents, where technology and, particularly, artificial intelligence is infused. Many artists, militants, and even certain corporations have tried to share their vision of what AI
+          can do or may do in future societies. In this installation, the idea is to use the opportunity of showing you these many visions of our technological reality or our supposed technological future, while at the same time, giving you a glimpse of what is currently feasible here and now.
+          Today, smart sensors coupled with machine learning technologies are already capable of scanning and reading your body, and from this, they can draw conclusions about your emotions and appreciation of the content you watch. Are you ready to enter in a situation where you will observe and be
+          observed by AI technologies!?
+        </p>
+      </div>
+    </div>
+
+    <div id="p3" class="tabcontent">
+      <h3>Selecteer een video op je tablet</h3>
+      <div id="player"></div>
+      <!-- hidden list of videos for this page -->
+      <span class="videoList" hidden>K3bgarlc4lA</span>
+      <span class="videoList" hidden>PGkTkImVSxg</span>
+      <span class="videoList" hidden>ZDLbakOm3mM</span>
+      <span class="videoList" hidden>M0bo9wIEAUQ</span>
+    </div>
+
+    <div id="p4" class="tabcontent">
+      <h3>Not Finished Yet</h3>
+      <p>Almost there</p>
+    </div>
+
+    <div id="p5" class="tabcontent">
+      <h3>Afsluiting</h3>
+      <p>Als je klaar bent kun je verder gaan naar de vragenlijst</p>
+    </div>
+
+    <!-- Tabbing of page -->
+    <script type="text/javascript" src="../resources/tab.js"></script>
+
+    <!-- PeerJS library -->
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <!-- PeerJS WebRTC configuration -->
+    <script type="text/javascript" src="../resources/peerJSreceive.js"></script>
+
+    <!-- YouTube API -->
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+
+      var tag = document.createElement("script");
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      function onYouTubeIframeAPIReady() {
+        window.player = new YT.Player("player", {
+          height: "720",
+          width: "1280",
+          videoId: "",
+          events: {
+            onStateChange: onPlayerStateChange,
+          },
+        });
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          console.log("--- Video Done!");
+          window.conn.send("Done");
+        }
+      }
+    </script>
+  </body>
+</html>

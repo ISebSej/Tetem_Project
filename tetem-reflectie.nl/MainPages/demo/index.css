@@ -1,0 +1,93 @@
+.p-2 {
+    padding: .5rem!important;
+}
+
+.text-dark {
+    color: #343a40!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+mb-2, .my-2 {
+    margin-bottom: .5rem!important;
+}
+.mt-2, .my-2 {
+    margin-top: .5rem!important;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+img {
+    max-width:90%;
+    height:auto;
+}
+
+.btn-spc{
+    background-color: white;
+    border: 2px solid #4CAF50; /* Green */
+    transition-duration: 0.4s;
+}
+
+
+.btn-spc:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.btn-spc:active {
+    transform: translateY(2px);;
+}
+
+canvas {
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  .axis {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .canvasjs-chart-credit{
+      visibility: hidden;
+  }
+
+  .progressbar {
+    width: 80%;
+    margin: 25px auto;
+    border: solid 1px #000;
+  }
+  .progressbar .inner {
+    height: 15px;
+    animation: progressbar-countdown;
+    /* Placeholder, this will be updated using javascript */
+    animation-duration: 40s;
+    /* We stop in the end */
+    animation-iteration-count: 1;
+    /* Stay on pause when the animation is finished finished */
+    animation-fill-mode: forwards;
+    /* We start paused, we start the animation using javascript */
+    animation-play-state: paused;
+    /* We want a linear animation, ease-out is standard */
+    animation-timing-function: linear;
+  }
+  @keyframes progressbar-countdown {
+    0% {
+      width: 100%;
+      background: #0F0;
+    }
+    100% {
+      width: 0%;
+      background: #F00;
+    }
+  }
+

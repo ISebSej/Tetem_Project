@@ -1,0 +1,140 @@
+/* Define standard colors, should be overwritten in index.html*/
+:root {
+  --main-color: white;
+  --text-color: black;
+  --select-color: white;
+  --unselect-color: gray;
+}
+
+@font-face {
+  font-family: consolas2;
+  src: url(./font/consola.ttf);
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: consolas2;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: var(--unselect-color);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 22px;
+  width: 20%;
+  color: var(--main-color);
+}
+
+.tablink:hover {
+  background-color: var(--unselect-color);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: var(--text-color);
+  display: none;
+  padding: 150px 200px;
+  height: 100%;
+  text-align: left;
+}
+
+#p1 {
+  background-color: var(--main-color);
+}
+#p2 {
+  background-color: var(--main-color);
+}
+#p3 {
+  background-color: var(--main-color);
+}
+#p4 {
+  background-color: var(--main-color);
+}
+#p5 {
+  background-color: var(--main-color);
+}
+#p6 {
+  background-color: var(--main-color);
+}
+#p7 {
+  background-color: var(--main-color);
+}
+#p8 {
+  background-color: var(--main-color);
+}
+
+p {
+  font-size: 22px;
+}
+
+.numbers {
+  width: 224px;
+  height: auto;
+}
+
+iframe {
+  overflow: hidden;
+}
+
+.marfix {
+  margin: -5px;
+}
+
+.btn-primary {
+  background-color: var(--unselect-color);
+  border: 0px;
+}
+
+.btn-primary:focus {
+  background-color: var(--select-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--select-color);
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4caf50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
